@@ -292,7 +292,7 @@ public class ReusableMethods {
 
 
     public static WebElement waitForVisibility(By locator, int timeout) {
-        WebDriverWait wait = new WebDriverWait(utilities.Driver.getDriver(), Duration.ofSeconds(timeout));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
@@ -384,6 +384,6 @@ public class ReusableMethods {
 
 
     public static void waitAndClickLocationText(WebElement element, String value) {
-        utilities.Driver.getDriver().findElement(By.xpath("//*[text()='" + value + "']")).click();
+        Driver.getDriver().findElement(By.xpath("//*[text()='" + value + "']")).click();
     }
 }
